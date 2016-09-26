@@ -159,15 +159,15 @@ android {
 gradle.properties:
 
 
-RELEASE_API_SERVER_URL="http://o2o.yijiahn.com/jyo2o_web/"
-RELEASE_API_SERVER_URL_MALL="http://mall.yijiahn.com/mall/"
-RELEASE_IM_SERVER_HOST="chat.jianyezuqiu.cn"
+RELEASE_API_SERVER_URL="xxx"
+RELEASE_API_SERVER_URL_MALL="xxx"
+RELEASE_IM_SERVER_HOST="xxx"
 RELEASE_IM_SERVER_PORT=5222
 RELEASE_LEO_DEBUG=false
 
-INSIDE_TEST_API_SERVER_URL="http://cso2o.yijiahn.com:8099/jyo2o_web/"
-INSIDE_TEST_API_SERVER_URL_MALL="http://cso2o.yijiahn.com:8088/mall/"
-INSIDE_TEST_IM_SERVER_HOST="cso2o.yijiahn.com"
+INSIDE_TEST_API_SERVER_URL="xxx"
+INSIDE_TEST_API_SERVER_URL_MALL="xxx"
+INSIDE_TEST_IM_SERVER_HOST="xxx"
 INSIDE_TEST_IM_SERVER_PORT=5222
 INSIDE_TEST_LEO_DEBUG=true
 
@@ -195,7 +195,8 @@ JENKINS_TIME=''
 那么在增加构建步骤中选择Execute Shell,而Windows环境的需要先下载curl工具，然后选择Execute Windows batch command。get地址与使用方法都在里面<a src='http://www.2cto.com/os/201205/131164.html'>http://www.2cto.com/os/201205/131164.html</a>。<图23></br>
 需要注意这里的上传文件的名称也是动态引用的方式，因为每次生产的名称是唯一的。用过是Shell那么引用方式的$｛NAME｝,而batch那么引用方式是%NAME%。</br>
 2）比较装逼的方式:我不只想要每个版本的下载长链接，我还想要每个版本二维码的长链接。但是就算同过浏览器打开最新上传的Apk地址，里面的二维码也只有短链接，不管是Apk的短链接还是二维码的它们其实是写死的，永远指向最新版的地址，这就有个问题，当在Jenkins中打开非最新版本的Apk地址或者二维码图片地址那么都会指向最新的，这就比较蛋疼了。经过仔细观察发现蒲公英Apk长链接生产的规则其实是固定字符串+appKey。Apk在返回的json串中可以找到。于是可以利用python脚本来执行上传，然后正则配置到AppKey，然后再拼上静态字符串就拿到了本次存放Apk的长链接。当然如果只是为了长链接用第一种方式即可。现在需要的是二维码的长链接，用Apk的长链接发起Http请求然后就可以拿到页面数据，通过正则匹配可以匹配到里面二维码的img标签地址，但是是短地址，蒲公英只有Apk才会在这个页面的img标签中返回长地址。于是我打了一个包名与签名同上传Apk相同的apk，但是里面没东西，大小只有几十K。在第一个Apk上传完成后马上上传这个小的Apk，这样再去拉取页面里面的img标签就可以得到二维码的长网址了。具体实现看下面python代码。
-```
+```java
+
 #coding: utf-8
 import os
 import re
@@ -228,6 +229,7 @@ if match:
         print('appKey#{soonAppkey}#appKeysoon#{soon}#soon'.format(soonAppkey=appkey,soon=match.group()))
     else:
         print('no qrcode')
+        
 ```
 命令中执行如图代码：<图24>
 </li>
