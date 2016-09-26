@@ -1,6 +1,3 @@
-# android-automation
-利用Jenkins实现Android自动打包发包
-
 <h1 align="center">利用Jenkins玩转Android自动打包发包</h1>
 ###先看一眼效果图：<图1>
 <h3 align="left">总体步骤可为：<h3>
@@ -53,9 +50,11 @@
 <li>动态修改生产的Apk路径与名称，因为如果是Jenkins打包发包那么名称必须是Jenkins传递过来的，不能写死，且唯一，不然没法上传</li>
 </ol>
 废话不多说，程序员就哪需要看这么多文字，直接干代码（一下是项目中部分代码）：</br>
-gradle.build:
+
 
 ```
+gradle.build:
+
 def getDate() {
     def date = new Date()
     def formattedDate = date.format('yyyyMMddHHmm')
@@ -155,9 +154,11 @@ android {
         }
     }
 }
-```</br>
-gradle.properties:</br>
-```
+
+
+gradle.properties:
+
+
 RELEASE_API_SERVER_URL="http://o2o.yijiahn.com/jyo2o_web/"
 RELEASE_API_SERVER_URL_MALL="http://mall.yijiahn.com/mall/"
 RELEASE_IM_SERVER_HOST="chat.jianyezuqiu.cn"
@@ -173,6 +174,7 @@ INSIDE_TEST_LEO_DEBUG=true
 APP_VERSION=2.4.0
 IS_JENKINS=false
 JENKINS_TIME=''
+
 ```
 
 
@@ -188,6 +190,5 @@ JENKINS_TIME=''
 回到主界面->系统管理->Global Tool Configuration：
 配置好JDK与Gradle。由于我本地已安装好JDK与Gradle所以只需为其指定路径即可。<图9><图10></br>
 然后回到主界面->新建->构建一个自由风格的项目->ok:
-
 
 
