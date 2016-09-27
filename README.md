@@ -235,7 +235,7 @@ if match:
 <li>经过上面的操作后大业马上就成了，接下来就是收集成果的时候了，在增加构建后操作步骤中选择Set build description，Regular expression中填写正则，然后磕着Description中可以引用，这里去匹配的是构建日志中的内容，Description的内容将显示到构建页面。我们这里如果需要插入下载链接或者二维码的话那么就需要用到Html标签，这时候需要去先设置下。步骤：系统管理->Configure Global Security->	Markup Formatter->Safe HTML。如果是选择上面的简单实现方式那么Regular expression的正则可以用户："appKey":"（.*）","userKey",用过用我的pyhton那么正则可以是:appKey#(.*)#appKeysoon#(.*)#soon,然后在Description中通过\1或者\2引用即可。</br><img src='https://github.com/mabeijianxi/android-automation/blob/master/image/image_25.png'/><img src='https://github.com/mabeijianxi/android-automation/blob/master/image/image_26.png'/></li>
 </ol>
 <h4>四、打包喝咖啡</h4>
-到这里那么最感动的时刻来了，轻轻的点击下保存按钮，这时候你会来到构建界面，轻击 Build with Parameters，就会出现这个界面![sample](https://github.com/mabeijianxi/android-automation/blob/master/image/image_27.png)。配置好参数，安下时代性的构建。从这一刻起如果测试要包你可以白他一眼，然后淡淡的说道:撸着呢，一边自己打去。
+到这里那么最感动的时刻来了，轻轻的点击下保存按钮，这时候你会来到构建界面，轻击 Build with Parameters，就会出现这个界面![sample](https://github.com/mabeijianxi/android-automation/blob/master/image/image_27.png)。配置好参数，按下时代性的构建。从这一刻起谁向你要包你可以点根烟淡淡的说道:妈的，撸着呢，一边自己打去。我反正是受够了要包岁月。
 <h4>注意事项：</h4>
 参数传递的时候Jenkins里面的参数名称需要与build.gradle里面的一致，不然没什么卵用。如:</br>![sample](https://github.com/mabeijianxi/android-automation/blob/master/image/image_28.png)![sample](https://github.com/mabeijianxi/android-automation/blob/master/image/image_29.png)
 
