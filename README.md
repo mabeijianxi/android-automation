@@ -10,7 +10,7 @@
 <li>配置项目build.gradle里面的脚本</li>
 <li>编写Python脚本拉取蒲公英上Apk二维码（可选）</li>
 </ol>
-###脚本配置地址：<a half="https://github.com/mabeijianxi/android-automation">https://github.com/mabeijianxi/android-automation</a>
+脚本配置地址：<a half="https://github.com/mabeijianxi/android-automation">https://github.com/mabeijianxi/android-automation</a>
 <h3>正式开撸</h3>
 <h4>一、下载新版Jenkins挂载到Tomcat：</h4>
 到<a half="https://jenkins.io/">Jenkins</a>下载适合的版本后点击安装，之后在Tomcat的webapps目录下新建一个Jenkins目录，再把刚安装好的Jenkins目录打开找到war目录，拷贝目录下全部数据到webapps下新建的Jenkins目录中。还有种启动方式是通过命令启动jenkins.war就行了，```java -jar jenkins_located_path/jenkins.war```。我们可以先为工作空间配置个环境变量。</br>![sample](https://github.com/mabeijianxi/android-automation/blob/master/image/image_8.png)![sample](https://github.com/mabeijianxi/android-automation/blob/master/image/image_2.png)</br>
