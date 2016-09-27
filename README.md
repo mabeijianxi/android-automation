@@ -160,15 +160,15 @@ android {
 gradle.properties:
 
 
-RELEASE_API_SERVER_URL="http://o2o.yijiahn.com/jyo2o_web/"
-RELEASE_API_SERVER_URL_MALL="http://mall.yijiahn.com/mall/"
-RELEASE_IM_SERVER_HOST="chat.jianyezuqiu.cn"
+RELEASE_API_SERVER_URL="xxx"
+RELEASE_API_SERVER_URL_MALL="xxx"
+RELEASE_IM_SERVER_HOST="xxx"
 RELEASE_IM_SERVER_PORT=5222
 RELEASE_LEO_DEBUG=false
 
-INSIDE_TEST_API_SERVER_URL="http://cso2o.yijiahn.com:8099/jyo2o_web/"
-INSIDE_TEST_API_SERVER_URL_MALL="http://cso2o.yijiahn.com:8088/mall/"
-INSIDE_TEST_IM_SERVER_HOST="cso2o.yijiahn.com"
+INSIDE_TEST_API_SERVER_URL="xxx"
+INSIDE_TEST_API_SERVER_URL_MALL="xxx"
+INSIDE_TEST_IM_SERVER_HOST="xxx"
 INSIDE_TEST_IM_SERVER_PORT=5222
 INSIDE_TEST_LEO_DEBUG=true
 
@@ -183,7 +183,7 @@ JENKINS_TIME=''
 配置好JDK与Gradle。由于我本地已安装好JDK与Gradle所以只需为其指定路径即可。![sample](https://github.com/mabeijianxi/android-automation/blob/master/image/image_9.png)![sample](https://github.com/mabeijianxi/android-automation/blob/master/image/image_10.png)</br>
 然后回到主界面->新建->构建一个自由风格的项目->ok:</br>
 <ol>
-<li>勾选上参数化构建过程,先点击Choice可为其配置可选参数。我的项目需要配置的可选参数有API环境、打包渠道、是否来自Jenkins打包的标识。 <img src='https://github.com/mabeijianxi/android-automation/blob/master/image/image_11.png'/>
+<li>勾选上参数化构建过程,先点击Choice可为其配置可选参数。我的项目需要配置的可选参数有API环境、打包渠道、是否来自Jenkins打包的标识。 </br><img src='https://github.com/mabeijianxi/android-automation/blob/master/image/image_11.png'/>
 <img src='https://github.com/mabeijianxi/android-automation/blob/master/image/image_12.png'/><img src='https://github.com/mabeijianxi/android-automation/blob/master/image/image_13.png'/><img src='https://github.com/mabeijianxi/android-automation/blob/master/image/image_14.png'/><img src='https://github.com/mabeijianxi/android-automation/blob/master/image/image_15.png'/></li>
 <li>点击String Parameter,让使用者可以自定义显示在App上的版本号，方便测试。可以再添加一个可输入的标签，最后把这个标签加到构建页的构建名称中。<img src='https://github.com/mabeijianxi/android-automation/blob/master/image/image_16.png'/></li>
 <li>点击Dynamic Parameter,注入Groovy脚本，主要是生产时间戳。<img src='https://github.com/mabeijianxi/android-automation/blob/master/image/image_17.png'/></li>
