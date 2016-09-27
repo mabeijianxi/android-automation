@@ -237,7 +237,7 @@ if match:
 <h4>四、打包喝咖啡</h4>
 到这里那么最感动的时刻来了，轻轻的点击下保存按钮，这时候你会来到构建界面，轻击 Build with Parameters，就会出现这个界面![sample](https://github.com/mabeijianxi/android-automation/blob/master/image/image_27.png)。配置好参数，安下时代性的构建。从这一刻起如果测试要包你可以白他一眼，然后淡淡的说道:撸着呢，一边自己打去。
 <h4>注意事项：</h4>
-参数传递的时候Jenkins里面的参数名称需要与build.gradle里面的一直，不然没什么卵用。如:</br>![sample](https://github.com/mabeijianxi/android-automation/blob/master/image/image_28.png)![sample](https://github.com/mabeijianxi/android-automation/blob/master/image/image_29.png)
+参数传递的时候Jenkins里面的参数名称需要与build.gradle里面的一致，不然没什么卵用。如:</br>![sample](https://github.com/mabeijianxi/android-automation/blob/master/image/image_28.png)![sample](https://github.com/mabeijianxi/android-automation/blob/master/image/image_29.png)
 
 
 
