@@ -1,6 +1,6 @@
 <h1 align="center">利用Jenkins玩转Android自动打包发包</h1>
 ###先看一眼效果图：
-![sample](https://github.com/mabeijianxi/android-automation/blob/master/image/image_1)
+![sample](https://github.com/mabeijianxi/android-automation/blob/master/image/image_1.png)
 <h3 align="left">总体步骤可为：<h3>
 
 <ol style="font-size:15px">
