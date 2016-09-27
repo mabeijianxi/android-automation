@@ -183,7 +183,7 @@ JENKINS_TIME=''
 配置好JDK与Gradle。由于我本地已安装好JDK与Gradle所以只需为其指定路径即可。![sample](https://github.com/mabeijianxi/android-automation/blob/master/image/image_9.png)![sample](https://github.com/mabeijianxi/android-automation/blob/master/image/image_10.png)</br>
 然后回到主界面->新建->构建一个自由风格的项目->ok:</br>
 <ol>
-<li>勾选上参数化构建过程,先点击Choice可为其配置可选参数。我的项目需要配置的可选参数有API环境、打包渠道、是否来自Jenkins打包的标识。![sample](https://github.com/mabeijianxi/android-automation/blob/master/image/image_11.png)
+<li>勾选上参数化构建过程,先点击Choice可为其配置可选参数。我的项目需要配置的可选参数有API环境、打包渠道、是否来自Jenkins打包的标识。 <img src='https://github.com/mabeijianxi/android-automation/blob/master/image/image_11.png'/>![sample](https://github.com/mabeijianxi/android-automation/blob/master/image/image_11.png)
 ![sample](https://github.com/mabeijianxi/android-automation/blob/master/image/image_12.png)![sample](https://github.com/mabeijianxi/android-automation/blob/master/image/image_3.png)![sample](https://github.com/mabeijianxi/android-automation/blob/master/image/image_14.png)![sample](https://github.com/mabeijianxi/android-automation/blob/master/image/image_15.png)</li>
 <li>点击String Parameter,让使用者可以自定义显示在App上的版本号，方便测试。可以再添加一个可输入的标签，最后把这个标签加到构建页的构建名称中。![sample](https://github.com/mabeijianxi/android-automation/blob/master/image/image_16.png)</li>
 <li>点击Dynamic Parameter,注入Groovy脚本，主要是生产时间戳。![sample](https://github.com/mabeijianxi/android-automation/blob/master/image/image_17.png)</li>
