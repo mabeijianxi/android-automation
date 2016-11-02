@@ -1,4 +1,5 @@
 <h1 align="center">利用Jenkins玩转Android自动打包发包</h1>
+###本篇文章已授权微信公众号 guolin_blog （郭霖）独家发布 
 ###请尊重原创，转载请注明出处：<a half="http://blog.csdn.net/mabeijianxi/article/details/52680283">http://blog.csdn.net/mabeijianxi/article/details/52680283</a>
 ###先看一眼效果图：
 ![sample](https://github.com/mabeijianxi/android-automation/blob/master/image/image_1.png)
