@@ -1,5 +1,6 @@
 <h1 align="center">利用Jenkins玩转Android自动打包发包</h1>
 ### 本篇文章已授权微信公众号 guolin_blog （郭霖）独家发布 
+
 ### 请尊重原创，转载请注明出处：<a half="http://blog.csdn.net/mabeijianxi/article/details/52680283">http://blog.csdn.net/mabeijianxi/article/details/52680283</a>
 ### 先看一眼效果图：
 <img src='https://github.com/mabeijianxi/android-automation/blob/master/image/image_1.png'/>
@@ -14,7 +15,7 @@
 脚本配置地址：<a href="https://github.com/mabeijianxi/android-automation">https://github.com/mabeijianxi/android-automation</a>
 <h3>正式开撸</h3>
 <h4>一、下载新版Jenkins挂载到Tomcat：</h4>
-到<a href="https://jenkins.io">Jenkins</a>下载适合的版本后点击安装，之后在Tomcat的webapps目录下新建一个Jenkins目录，再把刚安装好的Jenkins目录打开找到war目录，拷贝目录下全部数据到webapps下新建的Jenkins目录中。还有种启动方式是通过命令启动jenkins.war就行了，```java -jar jenkins_located_path/jenkins.war```。我们可以先为工作空间配置个环境变量。<br/> <img src='(https://github.com/mabeijianxi/android-automation/blob/master/image/image_8.png'/><img src'https://github.com/mabeijianxi/android-automation/blob/master/image/image_2.png'/><br/>
+到<a href="https://jenkins.io">Jenkins</a>下载适合的版本后点击安装，之后在Tomcat的webapps目录下新建一个Jenkins目录，再把刚安装好的Jenkins目录打开找到war目录，拷贝目录下全部数据到webapps下新建的Jenkins目录中。还有种启动方式是通过命令启动jenkins.war就行了，```java -jar jenkins_located_path/jenkins.war```。我们可以先为工作空间配置个环境变量。<br/> <img src='(https://github.com/mabeijianxi/android-automation/blob/master/image/image_8.png'/><img src='https://github.com/mabeijianxi/android-automation/blob/master/image/image_2.png'/><br/>
 我使用的是第一种方式，再启动Tomcat后访问<a href="http://localhost:8080/jenkins">http://localhost:8080/jenkins</a>就会进入引导进入页面，如果有选择安装插件界面进去后点击安装就行，一会儿就能进入主界面。<br/><img src='https://github.com/mabeijianxi/android-automation/blob/master/image/image_3.png'/><br/>
 <h4>二、安装Jenkins里面需要用到的一些插件：</h4>
 这里也没什么技术含量，系统管理->插件管理->管理插件->可选插件：
